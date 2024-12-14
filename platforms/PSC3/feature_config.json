@@ -1,0 +1,59 @@
+{
+    "version": "1.0",
+    "description": "Configuration of the bootloader solution example",
+    "target": "PSC3",
+    "security_setup": {
+        "validation_key": {
+            "description": "Key for image validation",
+            "value" : "../keys/cypress-test-ec-p256-pub.pem"
+        },
+        "validate_boot": {
+            "description": "Image validation during boot",
+            "value": true
+        },
+        "validate_upgrade": {
+            "description": "Image validation during upgrade",
+            "value": true
+        },
+        "image_encryption": {
+            "description": "Activate/deactivate image encryption",
+            "value": false
+        },
+        "encryption_key": {
+            "description": "Key for image encryption",
+            "value" : "../keys/enc-ec256-priv.pem"
+        },
+        "hw_rollback_prot": {
+            "description": "Use HW anti roll-back counter",
+            "value": false
+        },
+        "hw_key": {
+            "description": "Use key provisioned in device to verify images",
+            "value": false
+        },
+        "sw_downgrade_prev": {
+            "description": "Use software downgrade prevention (for 'overwrite' method only!)",
+            "value": false
+        }
+    },
+    "dependency_check": {
+        "description": "To prevent upgrading the non-compatible images for multiple-images",
+        "value": false
+    },
+    "fault_injection_hardening": {
+        "description": "FIH profile parameter. Can be 'off', 'low', 'medium', 'high'",
+        "value": "medium"
+    },
+    "serial_logging": {
+        "description":"Logging level is one list 'off', 'error', 'warning', 'info', 'debug'",
+        "value": "debug"
+    },
+    "combine_hex": {
+        "description": "Combine the bootloader and the application into a single image",
+        "value": false
+    },
+    "ram_app_staging": {
+        "description": "The L2 OEM Bootloader locates the RAMApp to SRAM from external flash",
+        "value": false
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "memory_regions":
+    [
+        {
+            "address"       : "0x32000000",
+            "size"          : "0x3FC00",
+            "erase_size"    : "0x200",
+            "erase_value"   : "0x00",
+            "mem_type"      : "FLASH"
+        },
+
+        {
+            "address"       : "0x3203FC00",
+            "size"          : "0x400",
+            "erase_size"    : "0x200",
+            "erase_value"   : "0x00",
+            "mem_type"      : "RBC"
+        }
+    ]
+}
